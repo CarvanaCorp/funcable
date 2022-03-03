@@ -1,0 +1,6 @@
+.vs/
+.vscode/
+.devcontainer/
+obj/
+bin/
+*.csproj.user

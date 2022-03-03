@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
+    <AssemblyName>Funcable.Control</AssemblyName>
+    <RootNamespace>Funcable.Control</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Funcable.Core\src\Funcable.Core.csproj" />
+  </ItemGroup>
+
+</Project>
