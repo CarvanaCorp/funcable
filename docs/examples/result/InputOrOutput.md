@@ -11,10 +11,10 @@ public async Task<IResult<Customer, Error>> Read(Guid customerId)
     using var response = await _httpClient.GetAsync($"https://api-test/api/1/customers/{customerId}");
     using var contentStream = await response.Content.ReadAsStreamAsync();
     var customerResult = await JsonDeserializer.Deserialize<ApiCustomerResult>(contentStream, _jsonOptions);
-    return (customerResult switch
+    return customerResult switch
     {
         { HasErrors: true } => Error<Customer, Error>(new Error(customerResult.Message)),
         _ => Ok<Customer, Error>(customerResult.ToCustomer())
-    }).AsTask();
+    };
 }
 ```

@@ -1,9 +1,17 @@
-# Welcome to Funcable
+# Funcable &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 `Funcable` is a `C#` library that borrows Functional Programming concepts and attempts to apply them to
 C#'s Object Oriented Imperative world.
 
 `Funcable` is heavily inspired by C#'s sister language, `F#`.
+
+## Packages
+
+| Package | Version | Comment |
+| --- | --- | --- |
+| Funcable.Core | TODO: NuGet Badge | Core Types |
+| Funcable.Control | TODO: NuGet Badge | Optional Control System |
+| Funcable.Then | TODO: NuGet Badge | Optional DSL |
 
 ## Design
 
@@ -28,3 +36,7 @@ This is the only required assembly. If Functional Programming isn't the desired 
 ## Funcable.Then
 
 `Funcable.Then` provides a more readable `DSL`. For `IOption<T>` the functions for `Map` and `Bind` become `Then`, and `Match` becomes `Finally`.  The same is true for `IResult<T, TError>` with the added `BiBind` becoming `Then`, and the `BindError` becoming `Catch`.
+
+### License
+
+Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
