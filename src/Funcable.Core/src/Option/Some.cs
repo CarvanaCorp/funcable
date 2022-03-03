@@ -13,10 +13,6 @@ public readonly struct Some<T> : IOption<T>
 		_ => throw new ArgumentNullException(nameof(value), "Some: null")
 	};
 
-	public bool IsSome => true;
-
-	public bool IsNone => false;
-
 	public int CompareTo(object? obj) => obj switch
 	{
 		IOption<T> option => CompareTo(option),

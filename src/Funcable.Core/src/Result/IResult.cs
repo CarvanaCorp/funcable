@@ -10,7 +10,4 @@ public interface IResult<T, TError> :
 	where T : notnull
 	where TError : notnull
 {
-	bool IsOk { get; }
-
-	bool IsError { get; }
 }

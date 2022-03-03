@@ -15,8 +15,8 @@ public class InvalidPatternException : Exception
 	{
 	}
 
-	public InvalidPatternException(Type invokedFromType, string methodName, Type patternType)
-		: base($"{invokedFromType.Name}.{methodName}: {patternType.Name}") { }
+	public InvalidPatternException(Type invokedFromType, string functionName, Type patternType)
+		: base($"{invokedFromType.Name}.{functionName}: {patternType.Name}") { }
 
 	protected InvalidPatternException(SerializationInfo info, StreamingContext context) : base(info, context)
 	{
