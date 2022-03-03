@@ -52,10 +52,6 @@ public static class FuncableTestFixture
 	public readonly struct TestSome<T> : IOption<T>
 		where T : notnull
 	{
-		public bool IsSome => true;
-
-		public bool IsNone => false;
-
 		public int CompareTo(IOption<T>? other)
 		{
 			throw new NotImplementedException();
@@ -96,10 +92,6 @@ public static class FuncableTestFixture
 		where T : notnull
 		where TError : notnull
 	{
-		public bool IsOk => true;
-
-		public bool IsError => false;
-
 		public int CompareTo(IResult<T, TError>? other)
 		{
 			throw new NotImplementedException();

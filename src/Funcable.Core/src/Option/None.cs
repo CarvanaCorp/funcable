@@ -5,10 +5,6 @@ namespace Funcable.Core;
 public readonly struct None<T> : IOption<T>
 	where T : notnull
 {
-	public bool IsSome => false;
-
-	public bool IsNone => true;
-
 	public int CompareTo(object? obj) => obj switch
 	{
 		IOption<T> option => CompareTo(option),

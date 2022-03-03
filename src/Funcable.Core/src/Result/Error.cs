@@ -14,10 +14,6 @@ public readonly struct Error<T, TError> : IResult<T, TError>
 		_ => throw new ArgumentNullException(nameof(error), "Error: null")
 	};
 
-	public bool IsOk => false;
-
-	public bool IsError => true;
-
 	public int CompareTo(object? obj) => obj switch
 	{
 		IResult<T, TError> either => CompareTo(either),

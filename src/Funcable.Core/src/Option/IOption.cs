@@ -9,7 +9,4 @@ public interface IOption<T> :
 	IEquatable<T>
 	where T : notnull
 {
-	bool IsSome { get; }
-
-	bool IsNone { get; }
 }
