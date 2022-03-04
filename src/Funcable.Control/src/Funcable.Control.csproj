@@ -10,4 +10,8 @@
     <ProjectReference Include="..\..\Funcable.Core\src\Funcable.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Using Include="Funcable.Core" />
+  </ItemGroup>
+
 </Project>

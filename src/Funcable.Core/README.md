@@ -41,4 +41,4 @@ result [Error]
 (int)result [int]: -1
 ```
 
-Programmers coming from other Functional languages might struggle slightly with the `Result<T, TError>` type. This is because in other languages the convention is that the `Left` type is considered the error and the `Right` type the success. `Right is right`.
+Programmers coming from other Functional languages might struggle slightly with the `IResult<T, TError>` type. This is because in other languages the convention is that the `Left` type is considered the error and the `Right` type the success. `Right is right`.

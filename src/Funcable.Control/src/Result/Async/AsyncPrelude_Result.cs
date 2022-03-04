@@ -1,5 +1,4 @@
 using System.Diagnostics.Contracts;
-using Funcable.Core;
 
 namespace Funcable.Control;
 
@@ -42,14 +41,14 @@ public static partial class Prelude
 		FromError(await result.ConfigureAwait(false));
 
 	[Pure]
-	public static async Task<IResult<T, TError>> OnOk<T, TError>(Task<IResult<T, TError>> result, Action<T> handler)
+	public static Task<IResult<T, TError>> OnOk<T, TError>(Task<IResult<T, TError>> result, Action<T> handler)
 		where T : notnull
 		where TError : notnull =>
-		await Match(
+		Match(
 			result,
 			t => { handler(t); return result; },
 			_ => result
-		).ConfigureAwait(false);
+		);
 
 	[Pure]
 	public static async Task<IResult<T, TError>> OnOk<T, TError>(Task<IResult<T, TError>> result, Func<T, Task> handler)
@@ -63,15 +62,14 @@ public static partial class Prelude
 		.ConfigureAwait(false)).ConfigureAwait(false);
 
 	[Pure]
-	public static async Task<IResult<T, TError>> OnError<T, TError>(Task<IResult<T, TError>> result, Action<TError> handler)
+	public static Task<IResult<T, TError>> OnError<T, TError>(Task<IResult<T, TError>> result, Action<TError> handler)
 		where T : notnull
 		where TError : notnull =>
-		await Match(
+		Match(
 			result,
 			_ => result,
 			e => { handler(e); return result; }
-		)
-		.ConfigureAwait(false);
+		);
 
 
 	[Pure]

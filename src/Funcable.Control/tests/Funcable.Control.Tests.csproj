@@ -24,4 +24,11 @@
     <ProjectReference Include="..\src\Funcable.Control.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Using Include="FluentAssertions" />
+    <Using Include="Funcable.Core" />
+    <Using Include="Funcable.Control.Prelude" Static="True" />
+    <Using Include="Funcable.Control.Tests.FuncableTestFixture" Static="True" />
+  </ItemGroup>
+
 </Project>

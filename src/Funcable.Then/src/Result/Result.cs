@@ -1,6 +1,4 @@
 using System.Diagnostics.Contracts;
-using Funcable.Control;
-using Funcable.Core;
 
 namespace Funcable.Then;
 

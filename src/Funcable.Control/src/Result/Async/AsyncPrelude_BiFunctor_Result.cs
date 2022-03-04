@@ -1,5 +1,4 @@
 using System.Diagnostics.Contracts;
-using Funcable.Core;
 
 namespace Funcable.Control;
 
