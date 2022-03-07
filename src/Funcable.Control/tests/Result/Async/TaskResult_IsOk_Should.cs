@@ -1,12 +1,8 @@
-using FluentAssertions;
 using Xunit;
-
-using static Funcable.Control.Prelude;
-using static Funcable.Control.Tests.FuncableTestFixture;
 
 namespace Funcable.Control.Tests;
 
-public class ValueResult_IsOk_Should
+public class TaskResult_IsOk_Should
 {
 	[Fact]
 	public async Task Return_True_When_IResult_T_Is_Ok_T() =>
