@@ -1,4 +1,4 @@
-# Funcable &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+# Funcable &middot; [![Build status](https://carvanadev.visualstudio.com/Carvana.OpenSource/_apis/build/status/Funcable)](https://carvanadev.visualstudio.com/Carvana.OpenSource/_build/latest?definitionId=20287) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://help.github.com/articles/creating-a-pull-request/) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 `Funcable` is a `C#` library that borrows Functional Programming concepts and attempts to apply them to
 C#'s Object Oriented Imperative world.
@@ -9,9 +9,9 @@ C#'s Object Oriented Imperative world.
 
 | Package | Version | Comment |
 | --- | --- | --- |
-| Funcable.Core | TODO: NuGet Badge | Core Types |
-| Funcable.Control | TODO: NuGet Badge | Optional Control System |
-| Funcable.Then | TODO: NuGet Badge | Optional DSL |
+| [Funcable.Core](https://www.nuget.org/packages/Funcable.Core/) | [![NuGet](https://img.shields.io/nuget/v/Funcable.Core.svg)](https://www.nuget.org/packages/Funcable.Core/) | Core Types ([docs](./src/Funcable.Core/README.md)) |
+| [Funcable.Control](https://www.nuget.org/packages/Funcable.Control/) | [![NuGet](https://img.shields.io/nuget/v/Funcable.Control.svg)](https://www.nuget.org/packages/Funcable.Control/) | Optional Control System ([docs](./src/Funcable.Control/README.md)) |
+| [Funcable.Then](https://www.nuget.org/packages/Funcable.Then/) | [![NuGet](https://img.shields.io/nuget/v/Funcable.Then.svg)](https://www.nuget.org/packages/Funcable.Then/) | Optional DSL ([docs](./src/Funcable.Then/README.md)) |
 
 ## Design
 

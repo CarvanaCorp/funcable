@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace Funcable.Core;
+namespace Funcable.Control;
 
 [Serializable]
 public class InvalidPatternException : Exception

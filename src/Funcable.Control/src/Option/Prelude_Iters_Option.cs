@@ -1,5 +1,3 @@
-using Funcable.Core;
-
 namespace Funcable.Control;
 
 public static partial class Prelude

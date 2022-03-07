@@ -1,7 +1,4 @@
-using FluentAssertions;
 using Xunit;
-
-using static Funcable.Control.Tests.FuncableTestFixture;
 
 namespace Funcable.Control.Tests;
 

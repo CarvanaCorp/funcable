@@ -1,5 +1,4 @@
 using System.Diagnostics.Contracts;
-using Funcable.Core;
 
 namespace Funcable.Control;
 
@@ -8,7 +7,7 @@ public static partial class Prelude
 	[Pure]
 	public static IOption<T> Some<T>(T value)
 		where T : notnull =>
-		Option.Some<T>(value);
+		Option.Some(value);
 
 	[Pure]
 	public static IOption<T> None<T>()
