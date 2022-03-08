@@ -2,9 +2,4 @@
 
   <Import Project="..\Directory.Build.props" />
 
-  <PropertyGroup>
-    <Platform>AnyCPU</Platform>
-    <OutputType>Library</OutputType>
-  </PropertyGroup>
-
 </Project>
