@@ -5,10 +5,23 @@ namespace Funcable.Control;
 public static partial class Prelude
 {
 	[Pure]
+	public static Task<IResult<T, Error>> AsyncOk<T>(T value)
+		where T : notnull =>
+		Task.FromResult(Ok(value));
+
+	[Pure]
 	public static Task<IResult<T, TError>> AsyncOk<T, TError>(T value)
 		where T : notnull
 		where TError : notnull =>
 		Task.FromResult(Ok<T, TError>(value));
+
+	[Pure]
+	public static Task<IResult<T, Error>> AsyncError<T>(
+		string message,
+		string code = "",
+		object? context = null)
+		where T : notnull =>
+		Task.FromResult(Error<T>(message, code, context));
 
 	[Pure]
 	public static Task<IResult<T, TError>> AsyncError<T, TError>(TError error)

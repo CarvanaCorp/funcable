@@ -5,6 +5,11 @@ namespace Funcable.Control;
 public static partial class Prelude
 {
 	[Pure]
+	public static IResult<T, Error> Ok<T>(T value)
+		where T : notnull =>
+		Result.Ok<T, Error>(value);
+
+	[Pure]
 	public static IResult<T, TError> Ok<T, TError>(T value)
 		where T : notnull
 		where TError : notnull =>
@@ -13,7 +18,7 @@ public static partial class Prelude
 	[Pure]
 	public static IResult<T, Error> Error<T>(string message, string code = "", object? context = null)
 		where T : notnull =>
-		Error<T, Error>(new Error(message, code, context));
+		Result.Error<T, Error>(new Error(message, code, context));
 
 	[Pure]
 	public static IResult<T, TError> Error<T, TError>(TError error)
