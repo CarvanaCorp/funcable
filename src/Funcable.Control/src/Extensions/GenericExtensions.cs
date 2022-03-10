@@ -36,11 +36,6 @@ public static class GenericExtensions
 		Result.Ok<T, TError>(value);
 
 	[Pure]
-	public static IResult<T, Error> Error<T>(this Error error)
-		where T : notnull =>
-		Result.Error<T, Error>(error);
-
-	[Pure]
 	public static IResult<T, TError> Error<T, TError>(this TError error)
 		where T : notnull
 		where TError : notnull =>
@@ -56,11 +51,6 @@ public static class GenericExtensions
 		where T : notnull
 		where TError : notnull =>
 		Task.FromResult(Result.Ok<T, TError>(value));
-
-	[Pure]
-	public static Task<IResult<T, Error>> AsyncError<T>(this Error error)
-		where T : notnull =>
-		Task.FromResult(Result.Error<T, Error>(error));
 
 	[Pure]
 	public static Task<IResult<T, TError>> AsyncError<T, TError>(
